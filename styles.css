@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    max-width: 330px; /* Adjust to fit with padding and gaps */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #333;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.cell.x {
+    color: #3498db; /* X color */
+}
+
+.cell.o {
+    color: #e74c3c; /* O color */
+}
+
+#restart {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    background-color: #27ae60; /* Green for Restart */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+#restart:hover {
+    background-color: #2ecc71; /* Lighter green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333; /* Dark color for better readability */
+}
